@@ -14,7 +14,7 @@ paths:
   /artists:
     get:
       description: Returns a list of artists
-      #Adds a query paramater (?***) for limiting number of items on a page as well as the page number to be displayed (does this so that all pages aren't displayed at once, which would cause unneeded server stress)
+      #Adds a query parameter (?***) for limiting number of items on a page as well as the page number to be displayed (does this so that all pages aren't displayed at once, which would cause unneeded server stress)
       parameters:
         - $ref: '#/components/parameters/PageLimit'
         - $ref: '#/components/parameters/PageOffset'
@@ -43,7 +43,7 @@ paths:
           description: Successfully created a new artist
         '400':
           $ref: '#/components/responses/400Error'
-  #Sets an additonal path for artist that uses an input parameter, which in this case is the username
+  #Sets an additional path for artist that uses an input parameter, which in this case is the username
   /artists/{username}:
     get:
       description: Obtain information about an artist from his or her unique username
